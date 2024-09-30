@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'poppins', sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  margin: 60px 110px 60px 220px;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+}
+
+.heading-text {
+  font-size: 3rem;
+  letter-spaccing: 5px;
+  margin-bottom: 30px;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+  font-family: 'poppins', sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  width: 14%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 60px 20px;
+}
+
+.sidebar .logo-text {
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+}
+
+.menu-list {
+  padding: 0;
+}
+
+.menu-list li .menu-link {
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 5px;
+  padding: 0px 15px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+  border: 1px solid #faf7f0;
+}
+
+.menu-list li .menu-link:hover {
+  background: #000;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.menu-list li .menu-link.active {
+  background: #000;
+  color: #fff;
+}
+
+/* Notes Page */
+.notes-page .note-page-wrapper .header {
+  display: flex;
+  flex-direction: column;
+}
+
+.notes-page .search-input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #333;
+}
+
+.notes-page .search-input:focus {
+  outline: 0.2px solid #000;
+}
+
+.notes-page .add-note-button {
+  display: block;
+  width: 140px;
+  height: 50px;
+  background: #54c392;
+  border-radius: 5px;
+  margin-bottom: 35px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.notes-page .add-note-button:hover {
+  background: #15b392;
+}
+
+/* Card note */
+.note-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.no-notes-message {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 80px 0;
+}
+
+.card-note {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #333;
+  border-radius: 3px;
+}
+
+.card-note-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.card-note .content {
+  width: 100%;
+}
+
+.card-note .title {
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+.card-note .date {
+  font-size: 1.1rem;
+  color: #15b392;
+}
+
+.card-note .body {
+  margin: 12px 0 22px 0;
+  width: 100%;
+  color: #333;
+  font-size: 1.2rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.card-note .button-container {
+  display: flex;
+  gap: 5px;
+}
+
+.card-note .button-container button {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.card-note .button-container .delete-button {
+  background: #f5004f;
+  color: #fff;
+}
+
+.card-note .button-container .delete-button:hover {
+  background: #e4003a;
+}
+
+.card-note .button-container .archive-button,
+.card-note .button-container .move-button {
+  background: #ffde4d;
+}
+
+.card-note .button-container .archive-button:hover,
+.card-note .button-container .move-button:hover {
+  background: #ffb22c;
+}
+
+/* add page*/
+
+.form-add-note {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-add-note .limit-title {
+  text-align: end;
+  font-size: 1.3rem;
+}
+
+.form-add-note input,
+.form-add-note textarea {
+  display: block;
+  max-width: 100%;
+  border: 2px solid #333;
+}
+
+.form-add-note input {
+  padding: 13px;
+  margin: 10px 0px;
+}
+
+.form-add-note textarea {
+  resize: none;
+  outline: none;
+  padding: 13px;
+  font-family: 'poppins', sans-serif;
+  height: 500px;
+  margin-bottom: 20px;
+}
+
+.form-add-note .add-button {
+  display: block;
+  width: 100%;
+  padding: 12px 0px;
+  background: #54c392;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-add-note .add-button:hover {
+  background: #15b392;
+}
